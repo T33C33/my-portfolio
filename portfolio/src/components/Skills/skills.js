@@ -8,6 +8,7 @@ const Skills = () => {
   return (
     <section id="skills">
       <span className="skillTitle">What I do</span>
+      <br />
       <span className="skillDesc">
         I specialize in creating visually appealing, yet functional,
         user-friendly websites. I manage these sites for SEO, boosting their
