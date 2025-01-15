@@ -1,7 +1,7 @@
 import React from 'react';
 import './intro.css';
 import bg from '../../Assets/Me2-removebg-preview.png';
-import btnImg from '../../Assets/icons8-contact-64.png';
+import btnImg from '../../Assets/icons8-hire-me-50 (2).png';
 import { Link } from 'react-scroll';
 
 const Intro = () => {
@@ -16,12 +16,12 @@ const Intro = () => {
         </span>
         <p className="introPara">
           I am a software engineer and SEO specialist with experience in
-          developing and optimizing websites to improve their search engine
-          rankings.
+          developing and optimizing websites to improve <br />
+          their search engine rankings.
         </p>
         <Link>
           <button className="btn">
-            <img src="" alt="" />
+            <img src={btnImg} alt="Hire" className="btnImg" />
             Hire Me.
           </button>
         </Link>
