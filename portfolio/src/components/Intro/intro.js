@@ -15,9 +15,10 @@ const Intro = () => {
           SEO Specialist & Software Engineer
         </span>
         <p className="introPara">
-          I am a software engineer and SEO specialist with experience in
-          developing and optimizing websites to improve <br />
-          their search engine rankings.
+          I work with businesses to improve their online presence and drive more
+          traffic to their websites. With a strong background in both SEO and
+          software engineering, I bring a unique blend of technical expertise
+          and marketing savvy to every project.
         </p>
         <Link>
           <button className="btn">

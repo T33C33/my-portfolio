@@ -37,16 +37,19 @@
 }
 
 .introPara {
-    font-size: medium;
     font-weight: 300;
+    font-size: 1rem;
+    max-width: 50rem;
+    padding-right: 1rem;
 }
 
 .btn {
-    background: white;
+    background: #0a9396;
     margin: 1rem 0;
     padding: 0.75rem 1.5rem;
     border: none;
     border-radius: 2rem;
+    color: white;
 }
 
 .btnImg {
