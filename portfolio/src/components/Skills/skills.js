@@ -50,7 +50,7 @@ const Skills = () => {
             className="skillBarImg"
           />
           <div className="skillBarText">
-            <h2>Search Engine Optimization(SEO)</h2>
+            <h2>Search Engine Optimization (SEO)</h2>
             <p>
               I optimize websites to improve their search engine rankings and
               increase organic traffic. My SEO strategies are data-driven and

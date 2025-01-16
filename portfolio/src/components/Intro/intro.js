@@ -1,7 +1,8 @@
 import React from 'react';
 import './intro.css';
-import bg from '../../Assets/Me2-removebg-preview.png';
-import btnImg from '../../Assets/icons8-hire-me-50 (2).png';
+import bg from '../../Assets/guy-cringing-as-see-something-disappointing-disgusting-handsome-african-american-man-pointing-looking-left.jpg';
+// import btnImg from '../../Assets/icons8-hire-me-50 (2).png';
+import { SlBriefcase } from 'react-icons/sl';
 import { Link } from 'react-scroll';
 
 const Intro = () => {
@@ -22,7 +23,8 @@ const Intro = () => {
         </p>
         <Link>
           <button className="btn">
-            <img src={btnImg} alt="Hire" className="btnImg" />
+            {/* <img src={SlBriefcase} alt="Hire" className="btnImg" /> */}
+            <SlBriefcase className="btnImg" />
             Hire Me.
           </button>
         </Link>

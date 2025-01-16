@@ -36,7 +36,7 @@
     margin: 1rem;
     padding: 1.5rem 2rem;
     border-radius: 0.5rem;
-    background: #001d3d;
+    background: #0a9396;
     align-items: center;
 
 }
@@ -45,5 +45,12 @@
     object-fit: cover;
     height: 3rem;
     width: 3rem;
-    margin-right: 1rem;
+    margin-right: 2rem;
+}
+
+.skillBarText {
+    text-align: justify;
+    color: #ffffff;
+    font-weight: 300;
+    font-size: 1rem;
 }
