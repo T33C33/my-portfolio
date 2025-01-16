@@ -48,9 +48,30 @@
     margin-right: 2rem;
 }
 
-.skillBarText {
+.skillBarText>p {
     text-align: justify;
     color: #ffffff;
     font-weight: 300;
     font-size: 1rem;
+}
+
+@media screen and (max-width: 720px) {
+    .skillBars>p {
+        font-size: 2vw;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .skillBars>p {
+        font-size: 3vw;
+    }
+
+    .skillBarImg {
+        height: 2.25rem;
+        width: 2.25rem;
+    }
+
+    .skillBarText>h2 {
+        font-size: 5vw;
+    }
 }
