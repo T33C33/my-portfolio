@@ -1,6 +1,6 @@
 import React from 'react';
 import './intro.css';
-import bg from '../../Assets/guy-cringing-as-see-something-disappointing-disgusting-handsome-african-american-man-pointing-looking-left.jpg';
+import bg from '../../Assets/TeeCee3.png';
 // import btnImg from '../../Assets/icons8-hire-me-50 (2).png';
 import { SlBriefcase } from 'react-icons/sl';
 import { Link } from 'react-scroll';
