@@ -22,7 +22,7 @@
 .clientImgs {
     margin: 1rem 0;
     display: flex;
-    flex-wrap: wrap;
+
 }
 
 .clientImg {
@@ -81,4 +81,12 @@
 .links {
     display: flex;
     flex-wrap: wrap;
+}
+
+.link {
+    object-fit: cover;
+    height: 3rem;
+    width: 3rem;
+    margin: 0 0.75rem;
+    border-radius: 2rem;
 }
