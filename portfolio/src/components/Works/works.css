@@ -23,6 +23,7 @@
     font-weight: 300;
     font-size: 1rem;
     margin-bottom: 1rem;
+    max-width: 45rem;
 }
 
 .worksImgs {
@@ -40,6 +41,7 @@
     height: 20rem;
     margin: 0.5rem;
     width: 20rem;
+    border: 1px solid #0bd3d6;
 }
 
 .workBtn {
@@ -53,7 +55,6 @@
 
 @media screen and (max-width:585px) {
     .worksImg {
-        height:
+        height: 48;
     }
-
 }
