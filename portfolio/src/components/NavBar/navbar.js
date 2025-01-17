@@ -3,7 +3,7 @@ import './navbar.css';
 import logo from '../../Assets/Logo 1.png';
 import { MdContactEmergency } from 'react-icons/md';
 import { Link } from 'react-scroll';
-import { GiHamburgerMenu } from 'react-icons/gi';
+import menu from '../../Assets/icons8-hamburger-menu-50.png';
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -69,8 +69,13 @@ const Navbar = () => {
         Contact Me
       </button>
       {/* mobMenu */}
-      <img src={menu} alt="Menu" className="mobMenu" />
-      <div className="navMenu">
+      <img
+        src={menu}
+        alt="Menu"
+        className="mobMenu"
+        onClick={() => setShowMenu(!showMenu)}
+      />
+      <div className="navMenu" style={{ display: showMenu ? 'flex' : 'none' }}>
         <Link
           activeClass="active"
           to="intro"
@@ -79,7 +84,7 @@ const Navbar = () => {
           offset={-100}
           duration={500}
           className="ListItem"
-          onClick={() => setShowMenu(!showMenu)}
+          onClick={() => setShowMenu(false)}
         >
           Home
         </Link>
@@ -91,7 +96,7 @@ const Navbar = () => {
           offset={-50}
           duration={500}
           className="ListItem"
-          onClick={() => setShowMenu(!showMenu)}
+          onClick={() => setShowMenu(false)}
         >
           About
         </Link>
@@ -103,7 +108,7 @@ const Navbar = () => {
           offset={-50}
           duration={500}
           className="ListItem"
-          onClick={() => setShowMenu(!showMenu)}
+          onClick={() => setShowMenu(false)}
         >
           Portfolio
         </Link>
@@ -115,7 +120,7 @@ const Navbar = () => {
           offset={-50}
           duration={500}
           className="ListItem"
-          onClick={() => setShowMenu(!showMenu)}
+          onClick={() => setShowMenu(false)}
         >
           Services
         </Link>
@@ -127,7 +132,7 @@ const Navbar = () => {
           offset={-50}
           duration={500}
           className="contact"
-          onClick={() => setShowMenu(!showMenu)}
+          onClick={() => setShowMenu(false)}
         >
           Contact
         </Link>
