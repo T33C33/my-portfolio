@@ -20,8 +20,10 @@ const Contact = () => {
         publicKey: 'ZQz4DgGXzbCWT4PA2ZI2u',
       })
       .then(
-        () => {
+        (result) => {
           console.log('SUCCESS!');
+          e.target.reset();
+          alert('Email Sent');
         },
         (error) => {
           console.log('FAILED...', error.text);
@@ -69,7 +71,7 @@ const Contact = () => {
             rows="5"
             placeholder="Your Message"
           ></textarea>
-          <button type="submit" value="Send" className="submitBtn">
+          <button type="submit" value="send" className="submitBtn">
             Submit
           </button>
           <div className="links">
