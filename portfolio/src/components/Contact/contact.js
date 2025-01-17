@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import './contact.css';
 import SOS from '../../Assets/SOSCreativity.png';
 import Battabox from '../../Assets/Battabox.png';
@@ -8,8 +8,26 @@ import Facebook from '../../Assets/Facebook.png';
 import LinkedIn from '../../Assets/LinkedIn.png';
 import Whatsapp from '../../Assets/Whatsapp.jpeg';
 import Twitter from '../../Assets/Twitter.png';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
+  const form = useRef();
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm('service_baomgv1', 'template_069ylo7', form.current, {
+        publicKey: 'ZQz4DgGXzbCWT4PA2ZI2u',
+      })
+      .then(
+        () => {
+          console.log('SUCCESS!');
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        }
+      );
+  };
   return (
     <section id="contactPage">
       <div id="clients">
@@ -32,9 +50,19 @@ const Contact = () => {
           I am always interested in new projects and collaborations. Let's work
           together to create something amazing!
         </span>
-        <form className="contactForm" action="">
-          <input type="text" className="name" placeholder="Your Name" />
-          <input type="text" className="email" placeholder="Your Email" />
+        <form className="contactForm" ref={form} onSubmit={sendEmail}>
+          <input
+            type="text"
+            className="name"
+            placeholder="Your Name"
+            name="your_name"
+          />
+          <input
+            type="text"
+            className="email"
+            placeholder="Your Email"
+            name="your_email"
+          />
           <textarea
             className="msg"
             name="message"
