@@ -1,11 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './navbar.css';
 import logo from '../../Assets/Logo 1.png';
-// import contactImg from '../../Assets/icons8-contact-64.png';
 import { MdContactEmergency } from 'react-icons/md';
 import { Link } from 'react-scroll';
+import { GiHamburgerMenu } from 'react-icons/gi';
 
 const Navbar = () => {
+  const [showMenu, setShowMenu] = useState(false);
   return (
     <nav className="navbar">
       <img src={logo} alt="logo" className="logo" />
@@ -67,6 +68,71 @@ const Navbar = () => {
         <MdContactEmergency className="desktopMenuImg" />
         Contact Me
       </button>
+      {/* mobMenu */}
+      <img src={menu} alt="Menu" className="mobMenu" />
+      <div className="navMenu">
+        <Link
+          activeClass="active"
+          to="intro"
+          spy={true}
+          smooth={true}
+          offset={-100}
+          duration={500}
+          className="ListItem"
+          onClick={() => setShowMenu(!showMenu)}
+        >
+          Home
+        </Link>
+        <Link
+          activeClass="active"
+          to="skills"
+          spy={true}
+          smooth={true}
+          offset={-50}
+          duration={500}
+          className="ListItem"
+          onClick={() => setShowMenu(!showMenu)}
+        >
+          About
+        </Link>
+        <Link
+          activeClass="active"
+          to="works"
+          spy={true}
+          smooth={true}
+          offset={-50}
+          duration={500}
+          className="ListItem"
+          onClick={() => setShowMenu(!showMenu)}
+        >
+          Portfolio
+        </Link>
+        <Link
+          activeClass="active"
+          to="clients"
+          spy={true}
+          smooth={true}
+          offset={-50}
+          duration={500}
+          className="ListItem"
+          onClick={() => setShowMenu(!showMenu)}
+        >
+          Services
+        </Link>
+        <Link
+          activeClass="active"
+          to="contact"
+          spy={true}
+          smooth={true}
+          offset={-50}
+          duration={500}
+          className="contact"
+          onClick={() => setShowMenu(!showMenu)}
+        >
+          Contact
+        </Link>
+        <Link className="ListItem">SEOlympus</Link>
+      </div>
     </nav>
   );
 };
