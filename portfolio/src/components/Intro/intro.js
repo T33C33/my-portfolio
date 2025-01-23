@@ -21,7 +21,7 @@ const Intro = () => {
           software engineering, I bring a unique blend of technical expertise
           and marketing savvy to every project.
         </p>
-        <Link>
+        <Link to='/'>
           <button className="btn">
             {/* <img src={SlBriefcase} alt="Hire" className="btnImg" /> */}
             <SlBriefcase className="btnImg" />

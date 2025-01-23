@@ -1,17 +1,21 @@
-import React, { useState } from 'react';
-import './navbar.css';
-import logo from '../../Assets/Logo 1.png';
-import { MdContactEmergency } from 'react-icons/md';
-import { Link } from 'react-scroll';
-import menu from '../../Assets/icons8-hamburger-menu-50.png';
+import React, { useState } from "react";
+import "./navbar.css";
+import logo from "../../Assets/Logo 1.png";
+import { MdContactEmergency } from "react-icons/md";
+import { Link as ScrollLink } from "react-scroll";
+import { Link as RouterLink } from "react-router-dom";
+import menu from "../../Assets/icons8-hamburger-menu-50.png";
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
   return (
     <nav className="navbar">
-      <img src={logo} alt="logo" className="logo" />
+      <RouterLink to="/">
+        <img src={logo} alt="logo" className="logo" />
+      </RouterLink>
+
       <div className="desktopMenu">
-        <Link
+        <ScrollLink
           activeClass="active"
           to="intro"
           spy={true}
@@ -21,8 +25,8 @@ const Navbar = () => {
           className="desktopMenuListItem"
         >
           Home
-        </Link>
-        <Link
+        </ScrollLink>
+        <ScrollLink
           activeClass="active"
           to="skills"
           spy={true}
@@ -32,8 +36,8 @@ const Navbar = () => {
           className="desktopMenuListItem"
         >
           About
-        </Link>
-        <Link
+        </ScrollLink>
+        <ScrollLink
           activeClass="active"
           to="works"
           spy={true}
@@ -43,8 +47,8 @@ const Navbar = () => {
           className="desktopMenuListItem"
         >
           Portfolio
-        </Link>
-        <Link
+        </ScrollLink>
+        <ScrollLink
           activeClass="active"
           to="clients"
           spy={true}
@@ -54,20 +58,24 @@ const Navbar = () => {
           className="desktopMenuListItem"
         >
           Services
-        </Link>
-        <Link className="desktopMenuListItem">SEOlympus</Link>
+        </ScrollLink>
+        <RouterLink to="/seolympus" className="desktopMenuListItem">
+          SEOlympus
+        </RouterLink>
       </div>
-      <button
+      <ScrollLink
+        activeClass="active"
+        to="contact"
+        spy={true}
+        smooth={true}
+        offset={-50}
+        duration={500}
         className="desktopMenuBtn"
-        onClick={() => {
-          document
-            .getElementById('contact')
-            .scrollIntoView({ behavior: 'smooth' });
-        }}
       >
         <MdContactEmergency className="desktopMenuImg" />
         Contact Me
-      </button>
+      </ScrollLink>
+
       {/* mobMenu */}
       <img
         src={menu}
@@ -75,8 +83,8 @@ const Navbar = () => {
         className="mobMenu"
         onClick={() => setShowMenu(!showMenu)}
       />
-      <div className="navMenu" style={{ display: showMenu ? 'flex' : 'none' }}>
-        <Link
+      <div className="navMenu" style={{ display: showMenu ? "flex" : "none" }}>
+        <ScrollLink
           activeClass="active"
           to="intro"
           spy={true}
@@ -87,8 +95,8 @@ const Navbar = () => {
           onClick={() => setShowMenu(false)}
         >
           Home
-        </Link>
-        <Link
+        </ScrollLink>
+        <ScrollLink
           activeClass="active"
           to="skills"
           spy={true}
@@ -99,8 +107,8 @@ const Navbar = () => {
           onClick={() => setShowMenu(false)}
         >
           About
-        </Link>
-        <Link
+        </ScrollLink>
+        <ScrollLink
           activeClass="active"
           to="works"
           spy={true}
@@ -111,8 +119,8 @@ const Navbar = () => {
           onClick={() => setShowMenu(false)}
         >
           Portfolio
-        </Link>
-        <Link
+        </ScrollLink>
+        <ScrollLink
           activeClass="active"
           to="clients"
           spy={true}
@@ -123,8 +131,8 @@ const Navbar = () => {
           onClick={() => setShowMenu(false)}
         >
           Services
-        </Link>
-        <Link
+        </ScrollLink>
+        <ScrollLink
           activeClass="active"
           to="contact"
           spy={true}
@@ -135,8 +143,10 @@ const Navbar = () => {
           onClick={() => setShowMenu(false)}
         >
           Contact
-        </Link>
-        <Link className="ListItem">SEOlympus</Link>
+        </ScrollLink>
+        <RouterLink to="/seolympus" className="ListItem">
+          SEOlympus
+        </RouterLink>
       </div>
     </nav>
   );

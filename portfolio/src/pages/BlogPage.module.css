@@ -1,0 +1,11 @@
+.blogPage {
+    min-height: 100vh;
+    height: fit-content;
+    width: 70%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-self: center;
+    padding-bottom: 4rem;
+}
