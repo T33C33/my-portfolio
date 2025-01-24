@@ -9,3 +9,9 @@
     justify-self: center;
     padding-bottom: 4rem;
 }
+
+.active {
+    color: aqua;
+    border-bottom: 1px solid aqua;
+    padding-bottom: 0.5rem;
+}

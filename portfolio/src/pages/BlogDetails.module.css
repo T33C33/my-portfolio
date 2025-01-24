@@ -20,7 +20,8 @@
   width: 100%;
   font-size: 1.1rem;
   line-height: 1.8;
-  color: #333;
+  color: #f9f9f9;
+  margin-top: 1rem;
 }
 
 .blogDetails .content h2 {

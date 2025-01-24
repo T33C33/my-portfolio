@@ -80,6 +80,11 @@
     background: #0a9396;
 }
 
+a {
+    text-decoration: none;
+    color: white;
+}
+
 @media screen and (max-width: 720px) {
     .mobMenu {
         display: flex;
